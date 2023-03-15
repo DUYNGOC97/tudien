@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="string">辞書</label>
+    <input type="text" id="string"/>
+    <button  onclick="transcript()">検索</button>
+    <p id="result"></p>
+    <script>
+        function transcript(){
+        let japanArr=["学校","学生","パソコン","机","携帯電話"];
+        let vietArr=["trường học","học sinh","máy tính","điện thoại"];
+        let string=document.getElementById("string").value;
+        let index=0;
+        let result="";
+        for(let i=0; i<japanArr.length;i++){
+            if(string==japanArr[i]){
+                index=i;
+                for(let j=0;j<vietArr.length;j++){
+                    if(index==j){
+                        result=vietArr[j];
+                    }
+                }
+
+            }
+          }
+            document.getElementById("result").innerHTML=result;
+        }
+        </script>
+
+    
+</body>
+</html>
